@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ name }} - مطور بايثون</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container { max-width: 1200px;
+    <title>NeuroTech AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>NeuroTech AI</h1>
+        <p>مطور بايثون | مطور ويب</p>
+        
+        <div class="projects">
+            <h2>مشاريعي</h2>
+            {% for project in projects %}
+            <div class="project-card">
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.desc }}</p>
+                <a href="{{ project.link }}" target="_blank">عرض المشروع</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
