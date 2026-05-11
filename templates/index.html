@@ -9,19 +9,17 @@
 <body>
     <div class="container">
         <h1>NeuroTech AI</h1>
-        <p>مطور بايثون | مطور ويب</p>
+        <p class="subtitle">مطور بايثون | مطور ويب</p>
+        
+        <h2>مشاريعي</h2>
         
         <div class="projects">
-            <h2>مشاريعي</h2>
-            {% for project in projects %}
-            <div class="project-card">
-                <h3>{{ project.name }}</h3>
-                <p>{{ project.desc }}</p>
-                <a href="{{ project.link }}" target="_blank">عرض المشروع</a>
+            <div class="card">
+                <h3>NeuroTech AI</h3>
+                <p>نظام ذكاء اصطناعي لتحليل البيانات الطبية باستخدام الشبكات العصبية.</p>
+                <a href="/project/neurotech" class="btn">عرض المشروع</a>
             </div>
-            {% endfor %}
-        </div>
-    </div>
-</body>
-</html>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+            
+            <div class="card">
+                <h3>XO Game AI</h3>
+                <p>لعبة XO ضد كمبيوتر ذكي يستخدم خوارزمية Minimax ل
